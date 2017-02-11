@@ -1,0 +1,16 @@
+E:\Project\Apps\UrTube\UrTube\bin\Debug\UrTube.exe.config
+E:\Project\Apps\UrTube\UrTube\obj\Debug\UrTube.csprojResolveAssemblyReference.cache
+E:\Project\Apps\UrTube\UrTube\obj\Debug\MainWindow.g.cs
+E:\Project\Apps\UrTube\UrTube\obj\Debug\Page2.g.cs
+E:\Project\Apps\UrTube\UrTube\obj\Debug\App.g.cs
+E:\Project\Apps\UrTube\UrTube\obj\Debug\UrTube_MarkupCompile.cache
+E:\Project\Apps\UrTube\UrTube\obj\Debug\UrTube_MarkupCompile.lref
+E:\Project\Apps\UrTube\UrTube\bin\Debug\UrTube.exe
+E:\Project\Apps\UrTube\UrTube\bin\Debug\UrTube.pdb
+E:\Project\Apps\UrTube\UrTube\obj\Debug\MainWindow.baml
+E:\Project\Apps\UrTube\UrTube\obj\Debug\Page2.baml
+E:\Project\Apps\UrTube\UrTube\obj\Debug\UrTube.g.resources
+E:\Project\Apps\UrTube\UrTube\obj\Debug\UrTube.Properties.Resources.resources
+E:\Project\Apps\UrTube\UrTube\obj\Debug\UrTube.csproj.GenerateResource.Cache
+E:\Project\Apps\UrTube\UrTube\obj\Debug\UrTube.exe
+E:\Project\Apps\UrTube\UrTube\obj\Debug\UrTube.pdb

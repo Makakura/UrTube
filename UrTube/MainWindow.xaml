@@ -1,0 +1,375 @@
+﻿<Window x:Class="UrTube.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UrTube"
+        mc:Ignorable="d" 
+        Height="700" 
+        Width="1366" 
+        WindowState="Maximized" 
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Border Height="50" Width="100"
+                Margin="20,0,0,0"
+            HorizontalAlignment="Left">
+                <Border.Background>
+                    <ImageBrush ImageSource="Assets/YouTube-logo.png" Stretch="UniformToFill"/>
+                </Border.Background>
+
+            </Border>
+            <StackPanel Orientation="Horizontal" 
+                        Margin="10"
+                        HorizontalAlignment="Right">
+                <TextBlock Text="_" 
+                           FontSize="20"/>
+                <TextBlock Text="X" 
+                           FontSize="20" 
+                           Margin="10,0,10,0"
+                           PreviewMouseDown="TextBlock_PreviewMouseDown" />
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1" Height="3" Background="#cc181e" VerticalAlignment="Top"/>
+        <Grid Grid.Row="0" 
+              Margin="450,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <TextBlock Text="1. Xác thực tài khoản" 
+                       MaxWidth="100"
+                       FontSize="20"
+                       TextWrapping="WrapWithOverflow"
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center" 
+                       FontWeight="Regular"
+                       FontFamily="Segoe UI"/>
+                <Grid Background="#cc181e" 
+                      Height="4" 
+                      MaxWidth="100"
+                      Visibility="Collapsed"
+                      VerticalAlignment="Bottom"/>
+            </Grid>
+            <Grid Grid.Column="1">
+                <TextBlock Text="2. Chọn tài nguyên và tùy chỉnh" 
+                       Width="180"
+                       FontSize="20"
+                           FontWeight="Medium"
+                       TextWrapping="WrapWithOverflow"
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center" 
+                       FontFamily="Segoe UI"/>
+                <Grid Background="#cc181e" 
+                      Height="4" 
+                      Visibility="Visible"
+                      MaxWidth="200"
+                      VerticalAlignment="Bottom"/>
+            </Grid>
+            <Grid Grid.Column="2">
+                <TextBlock Text="3. Reup" 
+                       MaxWidth="100"
+                       FontSize="20"
+                       TextWrapping="WrapWithOverflow"
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center" 
+                       FontFamily="Segoe UI"/>
+                <Grid Background="#cc181e" 
+                      Height="4" 
+                      Visibility="Collapsed"
+                      MaxWidth="100"
+                      VerticalAlignment="Bottom"/>
+            </Grid>
+        </Grid>
+        <Grid Background="#f1f1f1"
+              Grid.Row="1">
+            <Frame x:Name="mainFrame" Margin="20">
+
+            </Frame>
+            <Grid Background="White" Margin="20" Width="500" HorizontalAlignment="Center" Visibility="Collapsed" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="6*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Height="2" Background="#cc181e" VerticalAlignment="Bottom"/>
+                <TextBlock Text="CHỌN 1 KEY TÀI KHOẢN HIỆN CÓ"
+                           HorizontalAlignment="Center"
+                           FontSize="20"
+                           Margin="100,20,99,20" 
+                           Grid.Row="0"/>
+                <ListView Grid.Row="1">
+                    <ListViewItem>
+                        <Grid Margin="10" Width="460">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock
+                                       FontSize="16"
+                                       Text="UserName: "/>
+                                    <TextBlock x:Name="tblUserName"
+                                       FontSize="16"
+                                       Text="Makakura"/>
+                                    <Border Height="15" 
+                                            Width="15"
+                                            Margin="10,0,0,0">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="Assets/checkmark-verify-interface-symbol-button.png"/>
+                                        </Border.Background>
+
+                                    </Border>
+                                </StackPanel>
+                                <TextBlock x:Name="tblKey"
+                                       FontSize="14"
+                                       Foreground="DimGray"
+                                       Text="Key: 3254u3wey7ffdsh423jhrjew"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1" 
+                                        Orientation="Horizontal"
+                                        HorizontalAlignment="Right">
+                                <Border x:Name="btnEdit"
+                                        Margin="10"
+                                        Height="20"
+                                        Width="20">
+                                    <Border.Background>
+                                        <ImageBrush ImageSource="Assets/new-file (1).png"/>
+                                    </Border.Background>
+                                </Border>
+                                <Border x:Name="btnRemove"
+                                        Margin="10"
+                                        Height="20"
+                                        Width="20">
+                                    <Border.Background>
+                                        <ImageBrush ImageSource="Assets/rubbish-bin.png"/>
+                                    </Border.Background>
+                                </Border>
+                            </StackPanel>
+                        </Grid>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <Grid Margin="10" Width="460">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock
+                                       FontSize="16"
+                                       Text="UserName: "/>
+                                    <TextBlock
+                                       FontSize="16"
+                                       Text="Makakura"/>
+                                    <Border Height="15" 
+                                            Width="15"
+                                            Margin="10,0,0,0">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="Assets/checkmark-verify-interface-symbol-button.png"/>
+                                        </Border.Background>
+
+                                    </Border>
+                                </StackPanel>
+                                <TextBlock 
+                                       FontSize="14"
+                                       Foreground="DimGray"
+                                       Text="Key: 3254u3wey7ffdsh423jhrjew"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1" 
+                                        Orientation="Horizontal"
+                                        HorizontalAlignment="Right">
+                                <Border 
+                                        Margin="10"
+                                        Height="20"
+                                        Width="20">
+                                    <Border.Background>
+                                        <ImageBrush ImageSource="Assets/new-file (1).png"/>
+                                    </Border.Background>
+                                </Border>
+                                <Border 
+                                        Margin="10"
+                                        Height="20"
+                                        Width="20">
+                                    <Border.Background>
+                                        <ImageBrush ImageSource="Assets/rubbish-bin.png"/>
+                                    </Border.Background>
+                                </Border>
+                            </StackPanel>
+                        </Grid>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <Grid Margin="10" Width="460">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock
+                                       FontSize="16"
+                                       Text="UserName: "/>
+                                    <TextBlock
+                                       FontSize="16"
+                                       Text="Makakura"/>
+                                    <Border Height="15" 
+                                            Width="15"
+                                            Margin="10,0,0,0">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="Assets/checkmark-verify-interface-symbol-button.png"/>
+                                        </Border.Background>
+
+                                    </Border>
+                                </StackPanel>
+                                <TextBlock 
+                                       FontSize="14"
+                                       Foreground="DimGray"
+                                       Text="Key: 3254u3wey7ffdsh423jhrjew"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1" 
+                                        Orientation="Horizontal"
+                                        HorizontalAlignment="Right">
+                                <Border 
+                                        Margin="10"
+                                        Height="20"
+                                        Width="20">
+                                    <Border.Background>
+                                        <ImageBrush ImageSource="Assets/new-file (1).png"/>
+                                    </Border.Background>
+                                </Border>
+                                <Border 
+                                        Margin="10"
+                                        Height="20"
+                                        Width="20">
+                                    <Border.Background>
+                                        <ImageBrush ImageSource="Assets/rubbish-bin.png"/>
+                                    </Border.Background>
+                                </Border>
+                            </StackPanel>
+                        </Grid>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <Grid Margin="10" Width="460">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock
+                                       FontSize="16"
+                                       Text="UserName: "/>
+                                    <TextBlock
+                                       FontSize="16"
+                                       Text="Makakura"/>
+                                    <Border Height="15" 
+                                            Width="15"
+                                            Margin="10,0,0,0">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="Assets/checkmark-verify-interface-symbol-button.png"/>
+                                        </Border.Background>
+
+                                    </Border>
+                                </StackPanel>
+                                <TextBlock 
+                                       FontSize="14"
+                                       Foreground="DimGray"
+                                       Text="Key: 3254u3wey7ffdsh423jhrjew"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1" 
+                                        Orientation="Horizontal"
+                                        HorizontalAlignment="Right">
+                                <Border 
+                                        Margin="10"
+                                        Height="20"
+                                        Width="20">
+                                    <Border.Background>
+                                        <ImageBrush ImageSource="Assets/new-file (1).png"/>
+                                    </Border.Background>
+                                </Border>
+                                <Border 
+                                        Margin="10"
+                                        Height="20"
+                                        Width="20">
+                                    <Border.Background>
+                                        <ImageBrush ImageSource="Assets/rubbish-bin.png"/>
+                                    </Border.Background>
+                                </Border>
+                            </StackPanel>
+                        </Grid>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <Grid Margin="10" Width="460">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock
+                                       FontSize="16"
+                                       Text="UserName: "/>
+                                    <TextBlock
+                                       FontSize="16"
+                                       Text="Makakura"/>
+                                    <Border Height="15" 
+                                            Width="15"
+                                            Margin="10,0,0,0">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="Assets/checkmark-verify-interface-symbol-button.png"/>
+                                        </Border.Background>
+
+                                    </Border>
+                                </StackPanel>
+                                <TextBlock 
+                                       FontSize="14"
+                                       Foreground="DimGray"
+                                       Text="Key: 3254u3wey7ffdsh423jhrjew"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1" 
+                                        Orientation="Horizontal"
+                                        HorizontalAlignment="Right">
+                                <Border 
+                                        Margin="10"
+                                        Height="20"
+                                        Width="20">
+                                    <Border.Background>
+                                        <ImageBrush ImageSource="Assets/new-file (1).png"/>
+                                    </Border.Background>
+                                </Border>
+                                <Border 
+                                        Margin="10"
+                                        Height="20"
+                                        Width="20">
+                                    <Border.Background>
+                                        <ImageBrush ImageSource="Assets/rubbish-bin.png"/>
+                                    </Border.Background>
+                                </Border>
+                            </StackPanel>
+                        </Grid>
+                    </ListViewItem>
+                </ListView>
+                <Grid Grid.Row="2">
+                    <Border HorizontalAlignment="Center" 
+                            VerticalAlignment="Center"
+                            Height="50"
+                            Width="50">
+                        <Border.Background>
+                            <ImageBrush ImageSource="Assets/plus.png"/>
+                        </Border.Background>
+
+                    </Border>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
