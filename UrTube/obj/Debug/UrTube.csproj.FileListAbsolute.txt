@@ -65,3 +65,7 @@ C:\Users\Makakura\Source\Repos\UrTube2\UrTube\obj\Debug\Page2.baml
 C:\Users\Makakura\Source\Repos\UrTube2\UrTube\obj\Debug\UrTube.g.resources
 C:\Users\Makakura\Source\Repos\UrTube2\UrTube\obj\Debug\UrTube.Properties.Resources.resources
 C:\Users\Makakura\Source\Repos\UrTube2\UrTube\obj\Debug\UrTube.csproj.GenerateResource.Cache
+C:\Users\Makakura\Source\Repos\UrTube2\UrTube\obj\Debug\Page3.g.cs
+C:\Users\Makakura\Source\Repos\UrTube2\UrTube\obj\Debug\Page3.baml
+C:\Users\Makakura\Source\Repos\UrTube2\UrTube\obj\Debug\Page1.g.cs
+C:\Users\Makakura\Source\Repos\UrTube2\UrTube\obj\Debug\Page1.baml
